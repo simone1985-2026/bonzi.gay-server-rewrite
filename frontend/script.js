@@ -557,6 +557,13 @@ $.contextMenu({
                                 socket.emit("command", { list: ["unbless", d.userPublic.guid] });
                             }
                         },
+                                    deporn:{
+                                        name:"Blacklist Crosscolor",
+                                        callback:function(){
+                                            socket.emit("command",{list:["deporn", d.id]});
+                                        }
+                                    },
+
                         kick: {
                             name: "Kick User",
                             callback: function () {
@@ -654,6 +661,49 @@ $.contextMenu({
                     key: "mousedown",
                     value: function (a) {
                         1 == a.which && ((this.drag = !0), (this.dragged = !1), (this.drag_start = { x: a.pageX - this.x, y: a.pageY - this.y }));
+                    },
+                },
+                {
+                    key: "update",
+                    value: function () {
+                        //OK solution as long as no real color starts with "http"
+                        if(this.color.startsWith("http")){
+                            //Set canvas bg to the crosscolor as easel.js itself cant handle cors
+                            this.$canvas.css("background-image", 'url("'+this.color+'")');
+                            this.$canvas.css("background-position-x", -Math.floor(this.sprite.currentFrame % 17) * this.data.size.x+'px');
+                            this.$canvas.css("background-position-y", -Math.floor(this.sprite.currentFrame / 17) * this.data.size.y+'px');
+                        } else this.$canvas.css("background-image", 'none');
+
+                        //For tagged people
+                        if(this.userPublic.tagged){
+                            //Add one if it doesnt exist
+                            if(this.offtag == undefined){
+                                $("#bonzi_"+this.id).append("<div id='tag_"+this.id+"' class='official_tag'><b><i>"+this.userPublic.tag+"</i></b></div>")
+                                this.offtag = $("#tag_"+this.id);
+                            }
+                            //Update if it exists
+                            else {
+                                this.offtag.html("<b><i>"+this.userPublic.tag+"</i></b>")
+                            }
+                        }
+                        //Remove if they're not tagged but still have a tag
+                        else if(this.offtag != undefined){
+                            this.offtag.remove();
+                            this.offtag = undefined;
+                        }
+                        if (this.run) {
+                            if (
+                                (0 !== this.eventQueue.length && this.eventQueue[0].index >= this.eventQueue[0].list.length && this.eventQueue.splice(0, 1), (this.event = this.eventQueue[0]), 0 !== this.eventQueue.length && this.eventRun)
+                            ) {
+                                var a = this.event.cur().type;
+                                try {
+                                    this[this.eventTypeToFunc[a]]();
+                                } catch (b) {
+                                    this.event.index++;
+                                }
+                            }
+                            this.willCancel && (this.cancel(), (this.willCancel = !1)), this.needsUpdate && (this.stage.update(), (this.needsUpdate = !1));
+                        }
                     },
                 },
                 {
