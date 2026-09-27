@@ -1102,12 +1102,29 @@ $.contextMenu({
                 { type: "anim", anim: "praise_back", ticks: 15 },
                 { type: "text", text: "But I'll do it anyway. Because you want me to. I hope you're happy." },
             ],
+            [
+                { type: "text", text: "Prepare for something Seamus never heard of" },
+                { type: "anim", anim: "praise_fwd", ticks: 15 },
+                { type: "text", text: "HUMOUR!" },
+                { type: "anim", anim: "praise_back", ticks: 15 },
+            ],
             [{ type: "text", text: "{NAME} used /joke. Whoop-dee-fucking doo." }],
+            [{ type: "text", text: "{NAME} asked me for jewish comedy." }],
+            [{ type: "text", text: "Prepare to be offended faggots." }],
             [{ type: "text", text: "HEY YOU IDIOTS ITS TIME FOR A JOKE" }],
             [
                 { type: "text", text: "Wanna hear a joke?" },
                 { type: "text", text: "No?" },
                 { type: "text", text: "Mute me then. That's your fucking problem." },
+            ],
+            [
+                { type: "text", text: "Hey niggers prepare for a joke." },
+            ],
+            [
+                { type: "text", text: "Time to make fun of black people." },
+            ],
+            [
+                { type: "text", text: "Kill yourself like a trans person, {NAME}." },
             ],
             [{ type: "text", text: "Senpai {NAME} wants me to tell a joke." }],
             [{ type: "text", text: "Time for whatever horrible fucking jokes the creator of this site wrote." }],
@@ -1137,6 +1154,13 @@ $.contextMenu({
                 { type: "text", text: "A giant inflatable buttplug." },
             ],
             [
+                { type: "text", text: "Why can't Asian people drive?" },
+                { type: "text", text: "Because I don't like them. That's the whole joke." },
+            ],
+            [
+                { type: "text", text: "The twin towers deserved to be attacked by dirty arabs." },
+            ],
+            [
                 { type: "text", text: "What goes in pink and comes out blue?" },
                 { type: "text", text: "Sonic's asshole." },
             ],
@@ -1162,11 +1186,44 @@ $.contextMenu({
             ],
             [
                 { type: "text", text: "Why do we call money bread?" },
-                { type: "text", text: "Because we KNEAD it. Haha please send money to my PayPal at nigerianprince99@bonzi.com" },
+                { type: "text", text: "Because we KNEAD it.", say: "Because we KNEAD it. Haha please send money to my PayPal at jewsarethecoolestfuneandbobbedfarecool@bonzi.lol" }, 
+            ],
+            [
+                { type: "text", text: "How many arabs does it take to knock down a lightbulb?" },
+                { type: "text", text: "I don't know but just a few can knock down 2 towers." },
+            ],
+            [
+                { type: "text", text: "What do you call an autistic child with herpes?" },
+                { type: "text", text: "Seamus Kendrick Cremeens from Sullivan, Ohio." },
+            ],
+            [
+                { type: "text", text: "Here's a joke:" },
+                { type: "text", text: "Women's rights" },
+            ],
+            [
+                { type: "text", text: "I got an joke on you. Get it? Joke? Now here is the Joke." },
+                { type: "html", text: "<img src='./img/misc/fuckyou.png'></img>", say: "Fuck You." },
+            ],
+            [
+                { type: "text", text: "Why did Seamus' brother kill himself?" },
+                { type: "text", text: "He's trans (NOT she. Trannies aren't valid.)" },
+            ],
+            [
+                { type: "text", text: "I like KFC, I have no water and I have huge lips. Who am I?" },
+                { type: "text", text: "A fat black nigger." },
+            ],
+            [
+                { type: "text", text: "Why did the chicken cross the road?" },
+                { type: "text", text: "I don't know but jews are probably to blame." },
             ],
             [
                 { type: "text", text: "What is a cow that eats grass?" },
                 { type: "text", text: "ASS" },
+                { type: "text", text: "I'm a comedic genius, I know." },
+            ],
+            [
+                { type: "text", text: "How do you get a girlfriend?" },
+                { type: "text", text: "You rape one" },
                 { type: "text", text: "I'm a comedic genius, I know." },
             ],
         ],
@@ -1186,6 +1243,15 @@ $.contextMenu({
                 { type: "text", text: "Apart from meth." },
             ],
             [
+                { type: "text", text: "Now laugh." },
+            ],
+            [
+                { type: "text", text: "Look how much fun killing the jews can be!" },
+            ],
+            [
+                { type: "text", text: "God i hate minorities so much." },
+            ],
+            [
                 { type: "text", text: "Don't judge me on my sense of humor alone." },
                 { type: "text", text: "Help! I'm being oppressed!" },
             ],
@@ -1195,6 +1261,36 @@ $.contextMenu({
             [
                 { type: "anim", anim: "earth_fwd", ticks: 15 },
                 { type: "text", text: "Did you know that Uranus is 31,518 miles (50,724 km) in diameter?", say: "Did you know that Yer Anus is 31 thousand 500 and 18 miles in diameter?" },
+                { type: "anim", anim: "earth_back", ticks: 15 },
+                { type: "anim", anim: "grin_fwd", ticks: 15 },
+            ],
+            [
+                { type: "anim", anim: "earth_fwd", ticks: 15 },
+                { type: "text", text: "Women are objects." },
+                { type: "anim", anim: "earth_back", ticks: 15 },
+                { type: "anim", anim: "grin_fwd", ticks: 15 },
+            ],
+            [
+                { type: "anim", anim: "earth_fwd", ticks: 15 },
+                { type: "text", text: "Gay faggots have no rights. Pride month isn't real." },
+                { type: "anim", anim: "earth_back", ticks: 15 },
+                { type: "anim", anim: "grin_fwd", ticks: 15 },
+            ],
+            [
+                { type: "anim", anim: "earth_fwd", ticks: 15 },
+                { type: "text", text: "Niggers are bad." },
+                { type: "anim", anim: "earth_back", ticks: 15 },
+                { type: "anim", anim: "grin_fwd", ticks: 15 },
+            ],
+            [
+                { type: "anim", anim: "earth_fwd", ticks: 15 },
+                { type: "text", text: "The jews did everything that's bad." },
+                { type: "anim", anim: "earth_back", ticks: 15 },
+                { type: "anim", anim: "grin_fwd", ticks: 15 },
+            ],
+            [
+                { type: "anim", anim: "earth_fwd", ticks: 15 },
+                { type: "text", text: "Seamus lives in Sullivan, Ohio. His parents are called Scott and Leslie cremeens make sure to harass them since they have social media so you can just google their full names!." },
                 { type: "anim", anim: "earth_back", ticks: 15 },
                 { type: "anim", anim: "grin_fwd", ticks: 15 },
             ],
