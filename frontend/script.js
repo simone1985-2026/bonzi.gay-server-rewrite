@@ -1200,7 +1200,10 @@ $.contextMenu({
             ],
             [
                 { type: "text", text: "Fun Fact: The skript kiddie of this site didn't bother checking if the text that goes into the dialog box is HTML code." },
-                { type: "html", text: "<img src='./img/misc/topjej.png'></img>", say: "toppest jej" },
+                { type: "html", text: "<img src='./img/misc/topjej.png'></img>", say: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!" },
+                { type: "text", text: "What The Fuck! Stop Spamming You Little Shit!" },
+                { type: "html", text: "<img src='./img/misc/topjej.png'></img>", say: "BABABABAABABABABABABDUWNVFCDIWFIJFVIUQEDJWFVRIJWQDIEUCDEJDWUUJWSIJWFDJJOJDESWQIDU" },
+                { type: "text", text: "You Know What, Screw You Guys, I'm Going To Play Some Good Gacha Life!" },
             ],
         ],
         event_list_fact_end: [[{ type: "text", text: "o gee whilickers wasn't that sure interesting huh" }]],
