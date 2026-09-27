@@ -528,6 +528,7 @@ $.contextMenu({
                 },
                 pastule: {
                     name: "Pastule",
+                    name: `Call an Pastule`,
                     callback: function () {
                         socket.emit("talk", { text: d.userPublic.name + " stop being a pastule" });
                     },
@@ -540,41 +541,49 @@ $.contextMenu({
                 },
                 nigger: {
                     name: "Niggerify",
+                    name: `Niggerify`,
                     callback: function () {
                         socket.emit("talk", { text: d.userPublic.name + ", SEAMUS IS A NIGGER!" });
                     },
                 },
                 Call an Windowsfag: {
+                    name: `Call an Windowsfag`,
                     callback: function () {
                         socket.emit("talk", { text: "Hey, " + d.userPublic.name + "! You are an WindowsFag!" });
                     },
                 },
                 Call an LogoKid: {
+                    name: `Call an Logokid`,
                     callback: function () {
                         socket.emit("talk", { text: "Hey, " + d.userPublic.name + "! You are an Logokid!" });
                     },
                 },
                 Call an Objectfag: {
+                    name: `Call an Objectfag`,
                     callback: function () {
                         socket.emit("talk", { text: "Hey, " + d.userPublic.name + "! You are an ObjectFag!" });
                     },
                 },
                 Call an Cr6fag: {
+                    name: `Call an Cr6fag`,
                     callback: function () {
                         socket.emit("talk", { text: "Hey, " + d.userPublic.name + "! You are an Cr6Fag!" });
                     },
                 },
                 Call an Underage: {
+                    name: `Call an Underage`,
                     callback: function () {
                         socket.emit("talk", { text: "Hey, " + d.userPublic.name + "! You're a fucking Underage!" });
                     },
                 },
                 Call an BFDIFag: {
+                    name: `Call an BFDIFag`,
                     callback: function () {
                         socket.emit("talk", { text: "Hey, " + d.userPublic.name + "! You are an BFDIFag!" });
                     },
                 },
                 Tell an nobodyloveshim: {
+                    name: `Tell him that No one likes him`,
                     callback: function () {
                         socket.emit("talk", { text: "Hey, " + d.userPublic.name + "! Nobody Even Loves You! You're a fucking retard!" });
                     },
