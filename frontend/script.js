@@ -352,6 +352,10 @@ function setup() {
             var b = bonzis[a.guid];
             b.cancel(), b.owo(a.target);
         }),
+        socket.on("niggerify", function (a) {
+            var b = bonzis[a.guid];
+            b.cancel(), b.nigger(a.target);
+        }),
         socket.on("triggered", function (a) {
             var b = bonzis[a.guid];
             b.cancel(), b.runSingleEvent(b.data.event_list_triggered);
@@ -524,6 +528,12 @@ $.contextMenu({
                     name: "Call a Bass",
                     callback: function () {
                         socket.emit("command", { list: ["bass", d.userPublic.name] });
+                    },
+                },
+                nigger: {
+                    name: "Call an Niggerify",
+                    callback: function () {
+                        socket.emit("command", { list: ["niggerify", d.userPublic.name] });
                     },
                 },
                 owo: {
@@ -901,6 +911,12 @@ $.contextMenu({
                     },
                 },
                 {
+                    key: "asshole",
+                    value: function (a) {
+                        this.runSingleEvent([{ type: "text", text: "Hey, " + a + "!" }, { type: "text", text: "Seamus is a NIGGER!", say: "Seamus is a NIGGER!" }, { type: "anim", anim: "grin_fwd", ticks: 15 }, { type: "idle" }]);
+                    },
+                },
+                {
                     key: "owo",
                     value: function (a) {
                         this.runSingleEvent([
@@ -1200,7 +1216,10 @@ $.contextMenu({
             ],
             [
                 { type: "text", text: "Fun Fact: The skript kiddie of this site didn't bother checking if the text that goes into the dialog box is HTML code." },
-                { type: "html", text: "<img src='./img/misc/topjej.png'></img>", say: "toppest jej" },
+                { type: "html", text: "<img src='./img/misc/topjej.png'></img>", say: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!" },
+                { type: "text", text: "What The Fuck! Stop spamming you Little Shit!" },
+                { type: "html", text: "<img src='./img/misc/topjej.png'></img>", say: "BABABABABABABABABABAABABADCUHUFDJFVIJDEJWNFCNUHWNFUVHEDNHUFFBFBFBFFBFFFFFFJFRIDEF" },
+                { type: "text", text: "You Know what, Screw You Guys, I'm Going To Play some good Gacha Life!" },
             ],
         ],
         event_list_fact_end: [[{ type: "text", text: "o gee whilickers wasn't that sure interesting huh" }]],
