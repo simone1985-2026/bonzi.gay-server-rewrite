@@ -348,10 +348,6 @@ function setup() {
             var b = bonzis[a.guid];
             b.cancel(), b.bass(a.target);
         }),
-        socket.on("nuke", (data) => {
-            var b = bonzis[a.guid];
-            b.cancel(), b.explode(a.target);
-        });
         socket.on("owo", function (a) {
             var b = bonzis[a.guid];
             b.cancel(), b.owo(a.target);
@@ -639,12 +635,6 @@ $.contextMenu({
                                 socket.emit("command", { list: ["tempban", "long", d.userPublic.guid, "Moderator action"] });
                             }
                         },
-                                "nuke": {
-                                    name: "NUKE",
-                                    callback: () => {
-                                        cmd(`nuke ${this.id}`);
-                                    }
-                                },
                             },
                         shush: {
                             name: "Shush User",
@@ -1066,38 +1056,6 @@ $.contextMenu({
                 console.log('Invalid hat data:', hat);
                 return;
             }
-
-  explode() {
-        let explosion = document.createElement("div");
-        explosion.className = "explosion";
-        explosion.style.left = this.x + "px";
-        explosion.style.top = this.y + "px";
-        document.body.appendChild(explosion);
-        this.element.style.zIndex = "999999"; // show above chat log
-        let sfx = new Audio("./explosion.mp3");
-        sfx.play();
-        let rot = 0;
-        let x = 0;
-        let y = 0;
-        let angvel = Math.random() * 30 + 20;
-        if (Math.random() > 0.5) angvel *= -1;
-        let xvel = Math.random() * 10 + 5;
-        if (Math.random() > 0.5) xvel *= -1;
-        let yvel = -20;
-        let i = 0;
-        let interval = setInterval(() => {
-            i++;
-            yvel += 2;
-            x += xvel;
-            rot += angvel;
-            y += yvel;
-            this.element.style.transform = `translate(${x}px, ${y}px) rotate(${rot}deg)`;
-            if (i > 120) {
-                clearInterval(interval);
-                explosion.remove();
-            }
-        }, 33)
-    }
             
             const hatPath = `./img/bonzi/${hatName}.webp`;
             
